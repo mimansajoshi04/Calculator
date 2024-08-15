@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/black">
+
+        <TextView
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/backgroundborder"
+            android:fontFamily="monospace"
+            android:text="CALCULATOR"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="47dp" />
+
+        <TextView
+            android:id="@+id/expressionView"
+            android:layout_width="376dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/backgroundborder"
+            android:fontFamily="monospace"
+            android:gravity="bottom|end"
+            android:text=""
+            android:textAlignment="viewEnd"
+            android:textColor="@color/white"
+            android:textSize="37dp" />
+
+        <TextView
+            android:id="@+id/screenView"
+            android:layout_width="376dp"
+            android:layout_height="136dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/backgroundborder"
+            android:fontFamily="monospace"
+            android:gravity="bottom|end"
+            android:text=""
+            android:textAlignment="viewEnd"
+            android:textColor="@color/white"
+            android:textSize="71dp" />
+
+        <LinearLayout
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:padding="10dp"
+            >
+
+
+            <TextView
+                android:id="@+id/button_ac"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/operation_button"
+                android:fontFamily="monospace"
+                android:text="AC"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewOperationClick"
+                />
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/button_delete"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/operation_button"
+                android:fontFamily="monospace"
+                android:text="DEL"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewOperationClick"/>
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/button_percent"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/operation_button"
+                android:fontFamily="monospace"
+                android:text="%"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewOperationClick"/>
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/button_divide"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/operation_button"
+                android:fontFamily="monospace"
+                android:text="/"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewOperationClick"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:padding="10dp"
+            >
+
+
+            <TextView
+                android:id="@+id/button_seven"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_button"
+                android:fontFamily="monospace"
+                android:text="7"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewClick"
+                />
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/button_eight"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_button"
+                android:fontFamily="monospace"
+                android:text="8"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewClick"/>
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/button_nine"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_button"
+                android:fontFamily="monospace"
+                android:text="9"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewClick"
+                />
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/button_multiply"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/operation_button"
+                android:fontFamily="monospace"
+                android:text="*"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewOperationClick"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:padding="10dp"
+            >
+
+
+            <TextView
+                android:id="@+id/button_four"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_button"
+                android:fontFamily="monospace"
+                android:text="4"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewClick"/>
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/button_five"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_button"
+                android:fontFamily="monospace"
+                android:text="5"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewClick"/>
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/button_six"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_button"
+                android:fontFamily="monospace"
+                android:text="6"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewClick"/>
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/button_minus"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/operation_button"
+                android:fontFamily="monospace"
+                android:text="-"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewOperationClick"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:padding="10dp"
+            >
+
+
+            <TextView
+                android:id="@+id/button_one"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_button"
+                android:fontFamily="monospace"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewClick"/>
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/button_two"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_button"
+                android:fontFamily="monospace"
+                android:text="2"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewClick"/>
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/button_three"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_button"
+                android:fontFamily="monospace"
+                android:text="3"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewClick"/>
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/button_plus"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/operation_button"
+                android:fontFamily="monospace"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewOperationClick"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:padding="10dp"
+            >
+
+
+            <TextView
+                android:id="@+id/button_zero"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_button"
+                android:fontFamily="monospace"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewClick"/>
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/button_decimal"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_button"
+                android:fontFamily="monospace"
+                android:text="."
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewClick"/>
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/button_negate"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/operation_button"
+                android:fontFamily="monospace"
+                android:text="+/-"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewOperationClick"/>
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/button_equals"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/operation_button"
+                android:fontFamily="monospace"
+                android:text="="
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:onClick="onTextViewOperationClick"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
